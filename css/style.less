@@ -15,12 +15,16 @@
 
 /*============    Кольори    ===========*/
 	@white: #fff;
-	@ocean: #00acac;
+	@ocean: #11b2b2;
 	@black: #666666;
 	@light_green: #4ab848;
 	@green: #3ba639;
-	@grey: #666666;
+	@grey: #5a6f6f;
+	@light_grey: #b5b5b5;
 	@light_ocean: #ecf7f7;
+	@bottom_border: #d9e9e9;
+	@dark_okean: #415959;
+	@arrow_desible: #edeeee;
 
 /*============    Загальні    ===========*/
 	a:hover,
@@ -29,13 +33,24 @@
 	a:active{
 		text-decoration: none;	
 	}
+	span:hover,
+	span:visited,
+	span:focus,
+	span:active{
+		decoration: none;	
+	}
 	li{
 		list-style: none;
 	}
 	.my_padding{
-		width: 1150px;
+		width: 1160px;
 		margin-left: auto;
 		margin-right: auto; 
+	}
+	h3{
+		color: @ocean;
+		font-size: 30px;
+		text-transform: uppercase;
 	}
 
 	
@@ -44,11 +59,11 @@
 	header{
 		.top_line{
 			height: 65px;
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 			background-color: @white; 
 			.my_padding;
-			margin-bottom: 15px;
+			margin-bottom: 30px;
 			.header_contact{
 				padding-left: 0;
 				li{
@@ -58,15 +73,20 @@
 						font-size: 17px;
 					}
 					i{
-						color: @ocean;
+						color: @light_grey;
 						padding-right: 5px;
 					}
 				}
 				.email{
 					.bold;
+					vertical-align: bottom;
 				}
 				.icon_skype{
 					font-size: 17px;
+				}
+				.icon_email{
+					vertical-align: top;
+					margin-top: 5px;
 				}
 			}
 			.top_line_phone{
@@ -82,8 +102,9 @@
 						    color: @black;
 						}
 						i{
-							color: @black;
-							padding-right: 5px;
+							color: @light_grey;
+							padding-right: 4px;
+							font-size: 20px;
 						}
 						.mobile{
 							padding-left: 16px;
@@ -94,6 +115,7 @@
 		}
 		.top_line_btn{
 			padding-top: 10px;
+			padding-left: 35px;
 			.sing_up_header{
 				.btn_sing_up_header{
 					background: @light_green;
@@ -113,6 +135,9 @@
 				    -webkit-transition: all .35s ease;
 				    -o-transition: all .35s ease;
 				    transition: all .35s ease;
+				    &:hover{
+				    	background-color: @green;
+				    }
 				}
 			}
 		}
@@ -122,6 +147,9 @@
 				.top_line_dropdown_btn{
 					border: none;
 					.bold;
+					-webkit-transition: all .35s ease;
+				    -o-transition: all .35s ease;
+				    transition: all .35s ease;
 					background: transparent;
 					&:active,
 					&:visited,
@@ -138,31 +166,48 @@
 					}
 					i{
 						padding-right: 5px;
-						background-color: @grey;
+						color: @light_grey;
+					}
+					span{
+						color: @ocean;
 					}
 				}
 			}
 		}
 		.line_top_menu{
 			background-color: @ocean;
+			height: 60px;
 			.second_line{
-				.my_padding;				
-				.top_nav{
-					position: relative;
+				padding-top: 20px;
+				.my_padding;
+				.second_line_nav{
 					padding-left: 0;
-					li{
-						display: inline-block;
-						a{
-							padding: 16px 15px;
-							color: @white;
-							text-transform: uppercase;
+					padding-right: 0;
+					.top_nav{
+						position: relative;
+						padding-left: 0;
+						li{
+							display: inline-block;
+							a{
+								padding: 16px 10px;
+								color: @white;
+								text-transform: uppercase;
+								.bold;
+								font-size: 14px;
+							}
 						}
-					}
+					}	
 				}
+				.second_line_search{
+					.search_a{
+								padding-left: 90%;
+							}    
+				}				
+				
 			}
 		}
 		.header_img{
-			height: 285px;
+			height: 270px;
 			background: url("../img/header_img.jpg") no-repeat center center;
 			-moz-background-size: cover;
 			-webkit-background-size: cover;
@@ -193,9 +238,10 @@
 			}			
 		}
 	}
+
 /*============    Main    ===========*/
 	section#main{
-		margin-top: 20px;
+		margin-top: 40px;
 		.main_row{
 			.my_padding;
 			.aside_nav{
@@ -207,9 +253,9 @@
 					    padding-bottom: 15px;
 					    padding-left: 20px;
 				    	padding-right: 50px;
-				    	border-bottom: 0.5px solid @black;
+				    	border-bottom: 0.5px solid @bottom_border;
 				    	a{
-				    		color: @black;
+				    		color: @dark_okean;
 				    		font-size: 16px;
 				    	}
 				    	&:hover{
@@ -228,7 +274,7 @@
 			}
 			.aside_form{
 				background-color: @light_ocean;
-				margin-top: 15px;
+				margin-top: 20px;
 				margin-bottom: 25px;
 				.aside_form_control{
 					padding-right: 10px;
@@ -238,9 +284,7 @@
 					padding-top: 15px;
 					text-transform: uppercase;
 					margin: 5px 0 15px 0;				    
-				    text-align: center;				    
-				    font-size: 30px;
-				    color: @ocean;
+				    text-align: center;
 					}
 					input{					
 					    border-radius: 5px;
@@ -260,7 +304,7 @@
 						background: #4ab848;
 					    border: none;
 					    border-bottom: 3px solid #3ba639;
-					    color: #fff;
+					    color: @white;
 					    cursor: pointer;
 					    text-decoration: none;
 					    .bold;
@@ -272,9 +316,14 @@
 					    border-radius: 5px;
 					    height: 40px;
 					    padding: 0 20px;
-					    line-height: 40px;
+					    line-height: 40px;					    
+					    -webkit-transition: all .35s ease;
+					    -o-transition: all .35s ease;
 					    transition: all .35s ease;
-					    margin-left: 10px;
+						
+						&:hover{
+							background-color: @green;
+						}					    
 					}
 
 				}
@@ -282,35 +331,166 @@
 			}
 			.aside_img{
 				img{
-					width:100%;					
+					width:100%;
+					margin-bottom: 70px;					
 				}
 				
 			}
 		}
 		.egg_catalogs{
+			h3{
+				margin-top: 0;
+				font-size: 28px;
+			}			
+			p{
+				color: @dark_okean;
+				margin-bottom: 25px;
+				font-size: 16px;
+			}
 			.show_database_btn{
-				background: #4ab848;
-			    border: none;
-			    border-bottom: 3px solid #3ba639;
-			    color: #fff;
+				margin-bottom: 60px;
+				background: @light_green;			    
+			    border-bottom: 3px solid @green;
 			    cursor: pointer;
-			    text-decoration: none;
-			    outline: 0;
 			    display: inline-block;
-			    vertical-align: middle;
-			    white-space: nowrap;
-			    font-family: "RobotoBold";
-			    font-size: 16px;
 			    border-radius: 5px;
 			    height: 40px;
 			    padding: 0 20px;
-			    line-height: 40px;
-			    transition: all .35s ease;
+			    -webkit-transition: all .35s ease;
+			    	-o-transition: all .35s ease;
+			    	transition: all .35s ease;
+			    a{
+			    	.bold;
+			    	color: @white;
+			    	line-height: 40px;
+			    	text-decoration: none;
+			    	font-size: 15px;
+			    }
+			    &:hover{
+			    	background: @green;
+			    }
+			}
+			.carousel-indicators{
+				top: 345px;
+				li{					
+					border-color: @ocean;					
+				}
+				.active{
+					background-color: @ocean;
+				}				
+			}
+			img{
+				width: 100%;
+				height: 335px;
 			}
 		}
+		.my_carousel_control_left{
+			height: 52px;
+			width: 52px;			
+			position: absolute;
+			left: -17px;
+    		top: 130px;
+			.carousel_control{
+				display: block;
+				width: 52px;
+				height: 52px;
+				background: rgb(145, 159, 179, 0.9);
+				i{
+					font-size: 50px;
+					color: @arrow_desible;
+				}
+				&:hover{
+					background-color: @ocean;
+				}
+			}			
+		}
+		.my_carousel_control_right{
+			height: 52px;
+			width: 52px;			
+			position: absolute;
+			left: 443px;
+    		top: 130px;
+			.carousel_control{
+				display: block;
+				width: 52px;
+				height: 52px;
+				background: rgb(145, 159, 179, 0.9);
+				i{
+					font-size: 50px;
+					color: @arrow_desible;
+				}
+				&:hover{
+					background-color: @ocean;
+				}
+			}			
+		}
+		
 	}
-/*============    ШРИФТЫ    ===========*/
 
+/*============    Program    ===========*/
+	section#program{
+		height: 410px;		
+		background: url("../img/rectangle.jpg") no-repeat center center;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-ms-background-size: cover;
+		background-size: cover;
+		.program_class{
+			width: 920px;
+			margin-right: auto;
+			margin-left: auto;
+			h3{
+				text-align: center;
+				color: @white;
+				font-weight: 100;
+				margin-bottom: 0;
+				span{
+					.bold;
+				}
+			}
+			.program_container{
+				background-color: rgba(13, 214, 214, 0.502);
+				width: 275px;
+				height: 250px;
+				margin-left: 7px;
+				margin-right: 7px;
+				margin-top: 30px;
+				h4{
+					.bold;
+					font-size: 26px;
+					color: @white;
+					padding-top: 65px;
+					text-align: center;
+				}
+				a{
+					background: transparent;				    
+				    border: 1px solid @white;
+				    color: @white;
+				    cursor: pointer;
+				    text-decoration: none;
+				    .bold;
+				    outline: 0;
+				    display: inline-block;
+				    font-size: 16px;
+				    border-radius: 5px;
+				    height: 40px;
+				    padding: 0 20px;
+				    line-height: 40px;					    
+				    -webkit-transition: all .35s ease;
+				    -o-transition: all .35s ease;
+				    transition: all .35s ease;
+				    margin-left: 61px;
+				    
+				    margin-top: 10px;
+					&:hover{
+						background-color: @ocean;
+					}
+				}			    
+			}	
+		}
+		
+	}
 /*============    ШРИФТЫ    ===========*/
 
 /*============    ШРИФТЫ    ===========*/
