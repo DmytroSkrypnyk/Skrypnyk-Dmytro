@@ -24,57 +24,68 @@
 <body>
    <header>
       <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-3">
+         <div class="row top_line">
+            <div class="col-md-3 col-lg-3">
                <img src="img/logotype.png" alt="Logotype">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-3">
                <ul class="header_contact">               
-                  <li><a href="mailto:international@intersono.ua">international@intersono.ua</a></li>                  
-                  <li><a href="skype:intersono.1576546884?add">intersono.1576546884</a></li>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a class="email" href="mailto:international@intersono.ua">international@intersono.ua</a></li>                 
+                  <li><i class="fa fa-skype icon_skype" aria-hidden="true"></i><a class="skype" href="skype:intersono.1576546884?add">intersono.1576546884</a></li>
                </ul>
             </div>
-            <div class="col-md-4">               
+            <div class="hidden-md col-lg-2 top_line_phone">
+               <ul class="header_telephone">               
+                  <li><i class="fa fa-phone icon_phone" aria-hidden="true"></i><a href="tel:+380322955555">+38 (032) 295 55 55</a></li>
+                  <li><a class="mobile" href="tel:+380322955555">+38 (032) 295 55 55</a></li>
+               </ul>
+            </div>
+            <div class="col-md-4 col-lg-3 top_line_btn">               
                <div class="sing_up_header">
-                  <button class="btn_sing_up_header" data-toggle="modal" href="#">Sign up for consultation</button>
+                  <a class="btn_sing_up_header" href="#" data-toggle="modal">Sign up for consultation</a>
                </div> 
             </div>
-            <div class="col-md-1">
-               <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                   English
+            <div class="col-md-1 col-lg-1 top_line_select_btn">
+               <div class="dropdown top_line_dropdown">
+                  <button class="btn btn-default dropdown-toggle top_line_dropdown_btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                   <i class="fa fa-globe icon_phone" aria-hidden="true"></i>English
                      <span class="caret"></span>
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                       <li><a href="#">Polska</a></li>
                       <li><a href="#">Українська</a></li>                      
-                 </ul>
+                 </ul> -->
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-11">
+         <div class="row line_top_menu">
+            <div class="second_line">
+               <div class="col-md-11">
                <ul class="top_nav">
                <li><a href="">Clinic</a></li>
                <li><a href="">About infertility </a></li>
                <li><a href="">Treatments</a></li>
                <li><a href="">Prices </a></li>
                <li><a href="">International Patient Care </a></li>
-               <li><a href="">more</a></li>
+               <li><a href="">Patient success stories </a></li>
+               <li><a href="">Blogs</a></li>
+               <li><a href="">Contact</a></li>
+               <li class="hidden-lg"><a href="">more</a></li>
             </ul>
             </div>
             <div class="col-md-1">
                <a href="#"><img src="img/search_icon.png" alt="Search icon"></a>
             </div>
-         </div> 
-         <div class="row">
-            <div class="row">
-            <ol class="breadcrumb">
-               <li><a href="#">Home</a></li>
-               <li class="active">About us</li>
-            </ol>
             </div>
-            <div>
+         </div> 
+         <div class="row header_img">
+            <div class="row header_breadcrumb">
+               <ol class="breadcrumb my_breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li class="active">Egg and Sperm donor catalogs</li>
+               </ol>
+            </div>
+            <div class="text-center title">
                <h1>Egg and sperm donor catalogs</h1>
             </div>
          </div>
@@ -83,10 +94,10 @@
 
    <section id="main">
       <div class="container-fluid">
-         <div class="row">
+         <div class="row main_row">
             <div class="col-md-3">
                <div class="aside_nav">
-                  <ul class="aside_nav_li">
+                  <ul class="aside_nav_ul">
                      <li><a href="#">IFV</a></li>
                      <li><a href="#">ICSI</a></li>
                      <li><a href="#">IUI</a></li>
@@ -102,12 +113,12 @@
                      <li><a href="#">Cryopreservation of 
                      ovarian tissue</a></li>
                      <li><a href="#">PGD</a></li>
-                     <li><a href="#">Surrogacy</a></li>
-
+                     <li class="last"><a href="#">Surrogacy</a></li>
                   </ul>
                </div>
                <div class="aside_form">
-                  <form action="#"> 
+                  <div class="aside_form_control">
+                     <form action="#"> 
                      <h3>Contact Us</h3>
                      <input type="text" class="form-control aside_form_input" placeholder="Your Name"> 
                      <input type="email" class="form-control aside_form_input" placeholder="Your Email"> 
@@ -122,13 +133,14 @@
                        </datalist>
                      <button type="submit" class="btn btn-default aside_form_btn">Send</button>
                   </form>
-               </div>
+                  </div>                               
+               </div> 
                <div class="aside_img">
                   <img src="img/banner.jpg" alt="baner">
-               </div>               
+               </div>             
             </div>
             <div class="col-md-9">
-               <div class="row">
+               <div class="row egg_catalogs">
                   <div class="col-md-5">
                      <h3>Egg donor catalogs</h3>
                      <p>VF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.
@@ -173,7 +185,7 @@
                      </div>
                   </div>
                </div>
-               <div class="row">
+               <div class="row egg_catalogs">
                   <div class="col-md-5">
                      <h3>Sperm donorcatalogs</h3>
                      <p>VF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you. IVF (in vitro fertlisation) involves retrieving </p>

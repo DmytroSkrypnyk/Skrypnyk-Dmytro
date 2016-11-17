@@ -1,25 +1,314 @@
 /*============    Шрифт    ===========*/
 
-.bold {
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
-}
-.light {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
-.med{
-	font-family: 'Roboto', sans-serif;
-	font-weight: normal;
-}
+	.bold {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+	}
+	.light {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 100;
+	}
+	.med{
+		font-family: 'Roboto', sans-serif;
+		font-weight: normal;
+	}
 
-h1{
-	.light;
-}
-/*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+/*============    Кольори    ===========*/
+	@white: #fff;
+	@ocean: #00acac;
+	@black: #666666;
+	@light_green: #4ab848;
+	@green: #3ba639;
+	@grey: #666666;
+	@light_ocean: #ecf7f7;
 
-/*============    ШРИФТЫ    ===========*/
+/*============    Загальні    ===========*/
+	a:hover,
+	a:visited,
+	a:focus,
+	a:active{
+		text-decoration: none;	
+	}
+	li{
+		list-style: none;
+	}
+	.my_padding{
+		width: 1150px;
+		margin-left: auto;
+		margin-right: auto; 
+	}
 
+	
+
+/*============    Header    ===========*/
+	header{
+		.top_line{
+			height: 65px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			background-color: @white; 
+			.my_padding;
+			margin-bottom: 15px;
+			.header_contact{
+				padding-left: 0;
+				li{
+					margin: 5px 0;
+					a{
+						color: @ocean;
+						font-size: 17px;
+					}
+					i{
+						color: @ocean;
+						padding-right: 5px;
+					}
+				}
+				.email{
+					.bold;
+				}
+				.icon_skype{
+					font-size: 17px;
+				}
+			}
+			.top_line_phone{
+				padding-left: 0;
+				padding-right: 0;
+				.header_telephone{
+					padding-left: 0;
+					li{ 
+						margin: 5px 0;
+						a{
+							margin: 5px 0;
+						    font-size: 17px;
+						    color: @black;
+						}
+						i{
+							color: @black;
+							padding-right: 5px;
+						}
+						.mobile{
+							padding-left: 16px;
+						}
+					}
+				}
+			}
+		}
+		.top_line_btn{
+			padding-top: 10px;
+			.sing_up_header{
+				.btn_sing_up_header{
+					background: @light_green;
+				    border: none;
+				    border-bottom: 3px solid @green;
+				    color: @white;
+				    .bold;
+				    cursor: pointer;
+				    text-decoration: none;
+				    outline: 0;
+				    display: inline-block;				    
+				    font-size: 16px;
+				    border-radius: 5px;
+				    height: 40px;
+				    padding: 0 20px;
+				    line-height: 40px;
+				    -webkit-transition: all .35s ease;
+				    -o-transition: all .35s ease;
+				    transition: all .35s ease;
+				}
+			}
+		}
+		.top_line_select_btn{
+			padding-top: 13px;
+			.top_line_dropdown{
+				.top_line_dropdown_btn{
+					border: none;
+					.bold;
+					background: transparent;
+					&:active,
+					&:visited,
+					&:focus{
+						background: transparent;
+					}
+					&:hover{
+						background: transparent;			
+						/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+						-moz-box-shadow: 0px 0px 10px @light_green;
+						-webkit-box-shadow: 0px 0px 10px @light_green;
+						box-shadow: 0px 0px 10px @light_green;
+						/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+					}
+					i{
+						padding-right: 5px;
+						background-color: @grey;
+					}
+				}
+			}
+		}
+		.line_top_menu{
+			background-color: @ocean;
+			.second_line{
+				.my_padding;				
+				.top_nav{
+					position: relative;
+					padding-left: 0;
+					li{
+						display: inline-block;
+						a{
+							padding: 16px 15px;
+							color: @white;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+		.header_img{
+			height: 285px;
+			background: url("../img/header_img.jpg") no-repeat center center;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			-o-background-size: cover;
+			-ms-background-size: cover;
+			background-size: cover;
+			.header_breadcrumb{
+				.my_padding;
+				.my_breadcrumb{
+					background: transparent;
+					color: @white;
+					li{
+						color: @white;
+						font-size: 14px;
+						a{
+							color: @white;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			.title{
+				h1{
+					.bold;
+					font-size: 60px;
+					color: @white;
+				}
+			}			
+		}
+	}
+/*============    Main    ===========*/
+	section#main{
+		margin-top: 20px;
+		.main_row{
+			.my_padding;
+			.aside_nav{
+				.aside_nav_ul{
+					padding-left: 0;
+					li{
+						.bold;
+						padding-top: 15px;
+					    padding-bottom: 15px;
+					    padding-left: 20px;
+				    	padding-right: 50px;
+				    	border-bottom: 0.5px solid @black;
+				    	a{
+				    		color: @black;
+				    		font-size: 16px;
+				    	}
+				    	&:hover{
+				    		cursor: pointer;
+				    		background-color: @ocean;
+				    		a{
+				    		color: @white;
+				    		}
+				    	}				    	
+				    	
+					}
+					.last{
+						border: none;
+					}
+				}
+			}
+			.aside_form{
+				background-color: @light_ocean;
+				margin-top: 15px;
+				margin-bottom: 25px;
+				.aside_form_control{
+					padding-right: 10px;
+					padding-left: 10px;
+					padding-bottom: 10px;
+					h3{
+					padding-top: 15px;
+					text-transform: uppercase;
+					margin: 5px 0 15px 0;				    
+				    text-align: center;				    
+				    font-size: 30px;
+				    color: @ocean;
+					}
+					input{					
+					    border-radius: 5px;
+					    background: @white;
+					    border: 1px solid @ocean;				    
+					    width: 100%;
+					    height: 35px;
+					    padding: 0 10px;
+					    font-size: 14px;
+					    margin-bottom: 10px;					    
+					    -webkit-transition: all 0.3s ease;
+					    -o-transition: all 0.3s ease;
+					    transition: all 0.3s ease;				    
+					    color: #415959;				    
+					}
+					button{
+						background: #4ab848;
+					    border: none;
+					    border-bottom: 3px solid #3ba639;
+					    color: #fff;
+					    cursor: pointer;
+					    text-decoration: none;
+					    .bold;
+					    outline: 0;
+					    display: inline-block;
+					    vertical-align: middle;
+					    white-space: nowrap;				    
+					    font-size: 16px;
+					    border-radius: 5px;
+					    height: 40px;
+					    padding: 0 20px;
+					    line-height: 40px;
+					    transition: all .35s ease;
+					    margin-left: 10px;
+					}
+
+				}
+				
+			}
+			.aside_img{
+				img{
+					width:100%;					
+				}
+				
+			}
+		}
+		.egg_catalogs{
+			.show_database_btn{
+				background: #4ab848;
+			    border: none;
+			    border-bottom: 3px solid #3ba639;
+			    color: #fff;
+			    cursor: pointer;
+			    text-decoration: none;
+			    outline: 0;
+			    display: inline-block;
+			    vertical-align: middle;
+			    white-space: nowrap;
+			    font-family: "RobotoBold";
+			    font-size: 16px;
+			    border-radius: 5px;
+			    height: 40px;
+			    padding: 0 20px;
+			    line-height: 40px;
+			    transition: all .35s ease;
+			}
+		}
+	}
 /*============    ШРИФТЫ    ===========*/
 
 /*============    ШРИФТЫ    ===========*/
