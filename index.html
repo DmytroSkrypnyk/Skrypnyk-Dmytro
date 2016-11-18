@@ -87,14 +87,14 @@
                         </a>
                         <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
                               <ul class="dropdown-menu" aria-labelledby="clinic_menu">                        
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">About us</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Why us</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Our Certificates</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Our Team</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Success Rates</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Location</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">3-D Clinic Tour</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Photo Gallery</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">About us</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Why us</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Our Certificates</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Our Team</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Success Rates</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Location</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">3-D Clinic Tour</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Photo Gallery</a></li>
                               </ul>
                      </li>
                      <li class="dropdown">
@@ -104,12 +104,12 @@
                             data-toggle="dropdown">About infertility<span class="caret"></span></a>
                         <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
                               <ul class="dropdown-menu" aria-labelledby="infertility_menu">
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Causes of infertility</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Female infertility</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Male infertility</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Female infertility Diagnostics</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Male infertility Diagnostics</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Genetic Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Causes of infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Female infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Male infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Female infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Male infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Genetic Diagnostics</a></li>
                               </ul>
                      </li>
                      <li class="dropdown">
@@ -120,8 +120,8 @@
 
                             <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
                               <ul class="dropdown-menu" aria-labelledby="treatments_menu">
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Fertility treatment methods</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Infertility treatment Programs</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Fertility treatment methods</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Infertility treatment Programs</a></li>
                               </ul>
                      </li>
                      <li><a href="#">Prices</a></li>
@@ -132,9 +132,9 @@
                             data-toggle="dropdown">International Patient Care<span class="caret"></span></a>
                             <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
                               <ul class="dropdown-menu" aria-labelledby="patient_menu">
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">First visit</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Care and assistance</a></li>
-                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">International patients accommodation</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">First visit</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Care and assistance</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">International patients accommodation</a></li>
                               </ul>
                      </li>
                      <li><a href="#">Patient success stories</a></li>
@@ -144,8 +144,12 @@
                   </ul>
                </div>
 
-               <div class="col-lg-1 second_line_search">
-                  <a href="#"><img src="img/search_icon.png" alt="Search icon" class="search_a"></a>
+               <div id="sb-search" class="sb-search">
+                  <form>
+                     <input class="sb-search-input" placeholder="Что будет искать?" type="text" value="" name="search" id="search">
+                     <input class="sb-search-submit" type="submit" value="">
+                     <span class="sb-icon-search"></span>
+                  </form>
                </div>
             </div>
          </div> 
@@ -416,7 +420,9 @@
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="js/bootstrap.min.js"></script>    
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/classie.js"></script>
+   <script src="js/uisearch.js"></script>    
 
 
 </body>
