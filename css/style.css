@@ -159,37 +159,42 @@ header .top_line_select_btn .top_line_dropdown .top_line_dropdown_btn span {
 }
 header .line_top_menu {
   background-color: #11b2b2;
-  height: 60px;
+  margin-bottom: 0;
 }
 header .line_top_menu .second_line {
-  padding-top: 20px;
   width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
-header .line_top_menu .second_line .second_line_nav {
-  padding-left: 0;
-  padding-right: 0;
-}
 header .line_top_menu .second_line .second_line_nav .top_nav {
   position: relative;
   padding-left: 0;
+  margin-bottom: 0;
+  height: 60px;
 }
 header .line_top_menu .second_line .second_line_nav .top_nav li {
   display: inline-block;
+  height: 60px;
 }
 header .line_top_menu .second_line .second_line_nav .top_nav li a {
-  padding: 16px 10px;
-  color: #ffffff;
-  text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  position: relative;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
   font-size: 14px;
+  padding: 21px 9px;
+}
+header .line_top_menu .second_line .second_line_nav .top_nav li:hover {
+  background-color: #0d8e8e;
 }
 header .line_top_menu .second_line .second_line_search .search_a {
-  padding-left: 90%;
+  position: relative;
+  padding-top: 23px;
+  padding-left: 74px;
 }
-header .header_img {
+header .header_brad {
   height: 270px;
   background: url("../img/header_img.jpg") no-repeat center center;
   -moz-background-size: cover;
@@ -198,24 +203,24 @@ header .header_img {
   -ms-background-size: cover;
   background-size: cover;
 }
-header .header_img .header_breadcrumb {
+header .header_brad .header_breadcrumb {
   width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
-header .header_img .header_breadcrumb .my_breadcrumb {
+header .header_brad .header_breadcrumb .my_breadcrumb {
   background: transparent;
   color: #ffffff;
 }
-header .header_img .header_breadcrumb .my_breadcrumb li {
+header .header_brad .header_breadcrumb .my_breadcrumb li {
   color: #ffffff;
   font-size: 14px;
 }
-header .header_img .header_breadcrumb .my_breadcrumb li a {
+header .header_brad .header_breadcrumb .my_breadcrumb li a {
   color: #ffffff;
   font-size: 14px;
 }
-header .header_img .title h1 {
+header .header_brad .title h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 60px;
@@ -241,6 +246,9 @@ section#main .main_row .aside_nav .aside_nav_ul li {
   padding-left: 20px;
   padding-right: 50px;
   border-bottom: 0.5px solid #d9e9e9;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 section#main .main_row .aside_nav .aside_nav_ul li a {
   color: #415959;
@@ -492,7 +500,7 @@ footer .footer_top .footer_info ul li a {
   -o-transition: all .3s ease;
   transition: all .3s ease;
 }
-footer .footer_top .footer_info ul span {
+footer .footer_top .footer_info span {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #ffffff;
