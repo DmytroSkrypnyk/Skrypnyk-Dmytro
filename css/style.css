@@ -12,6 +12,18 @@
   font-weight: normal;
 }
 /*============    Кольори    ===========*/
+.search-input::-webkit-input-placeholder {
+  color: #11b2b2;
+}
+.search-input:-moz-placeholder {
+  color: #11b2b2;
+}
+.search-input::-moz-placeholder {
+  color: #11b2b2;
+}
+.search-input:-ms-input-placeholder {
+  color: #11b2b2;
+}
 /*============    Загальні    ===========*/
 a:hover,
 a:visited,
@@ -196,108 +208,40 @@ header .line_top_menu .second_line .second_line_nav .top_nav .dropdown_menu_li {
 header .line_top_menu .second_line .second_line_nav .top_nav .dropdown_menu_li a {
   color: #11b2b2;
 }
-header .line_top_menu .second_line .sb-search {
-  position: relative;
-  margin-top: 10px;
-  width: 0%;
-  min-width: 60px;
-  height: 60px;
-  float: right;
-  overflow: hidden;
-  -webkit-transition: width 0.3s;
-  -moz-transition: width 0.3s;
-  transition: width 0.3s;
-  -webkit-backface-visibility: hidden;
-}
-header .line_top_menu .second_line .sb-search-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: none;
-  outline: none;
-  background: #fff;
-  width: 100%;
-  height: 60px;
-  margin: 0;
-  z-index: 10;
-  padding: 20px 65px 20px 20px;
-  font-family: inherit;
-  font-size: 20px;
-  color: #2c3e50;
-}
-header .line_top_menu .second_line .sb-search-input::-webkit-input-placeholder {
-  color: #efb480;
-}
-header .line_top_menu .second_line .sb-search-input:-moz-placeholder {
-  color: #efb480;
-}
-header .line_top_menu .second_line .sb-search-input::-moz-placeholder {
-  color: #efb480;
-}
-header .line_top_menu .second_line .sb-search-input:-ms-input-placeholder {
-  color: #efb480;
-}
-header .line_top_menu .second_line .sb-icon-search,
-header .line_top_menu .second_line .sb-search-submit {
-  width: 60px;
-  height: 60px;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  line-height: 60px;
-  text-align: center;
+header .line_top_menu .second_line .search {
+  padding-left: 0;
   cursor: pointer;
-}
-header .line_top_menu .second_line .sb-search-submit {
-  background: #fff;
-  /* äëÿ IE */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /* IE 8 */
-  filter: alpha(opacity=0);
-  /* IE 5-7 */
-  opacity: 0;
-  color: transparent;
-  border: none;
-  outline: none;
-  z-index: -1;
-}
-header .line_top_menu .second_line .sb-icon-search {
-  color: #fff;
-  background: #e67e22;
-  z-index: 90;
-  font-size: 22px;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-}
-header .line_top_menu .second_line .sb-icon-search:before {
-  content: "\e000";
-}
-header .line_top_menu .second_line .sb-search.sb-search-open,
-header .line_top_menu .second_line .no-js .sb-search {
-  width: 100%;
-}
-header .line_top_menu .second_line .sb-search.sb-search-open .sb-icon-search,
-header .line_top_menu .second_line .no-js .sb-search .sb-icon-search {
-  background: #da6d0d;
-  color: #fff;
-  z-index: 11;
-}
-header .line_top_menu .second_line .sb-search.sb-search-open .sb-search-submit,
-header .line_top_menu .second_line .no-js .sb-search .sb-search-submit {
-  z-index: 90;
-}
-header .line_top_menu .second_line .second_line_search .search_a {
+  background: transparent;
+  width: 10px;
+  margin-top: 10px;
   position: relative;
-  padding-top: 23px;
-  padding-left: 74px;
+  right: -74px;
+}
+header .line_top_menu .second_line .search input[type=text] {
+  background: url('../img/search_icon.png') center left no-repeat;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  background-color: red;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  background-color: #11b2b2;
+  padding: 12px 0px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+header .line_top_menu .second_line .search input[type=text]:focus {
+  background-color: #ecf7f7;
+  position: absolute;
+  width: 400px;
+  outline: none;
+  border: 1px solid #d9e9e9;
+  border-radius: 5px;
+  top: 0px;
+  right: 20%;
 }
 header .header_brad {
   height: 270px;
@@ -579,9 +523,27 @@ section#program .program_class .program_container a {
 section#program .program_class .program_container a:hover {
   background-color: #11b2b2;
 }
-/*============    Footer    ===========                             ПЕРЕВІРИТИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*============    Footer    ===========*/
 footer {
   background-color: #2b2b2b;
+}
+footer #button_up {
+  position: relative;
+  left: 90%;
+  top: 92px;
+  width: 50px;
+  height: 50px;
+  background: #11b2b2;
+  z-index: 999;
+  bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+footer #button_up a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../img/arrow_top.png") center center no-repeat;
 }
 footer .footer_top {
   border-bottom: 2px solid #4d4d4d;
@@ -626,27 +588,40 @@ footer .footer_contact p {
 footer .footer_contact .footer_social a {
   display: inline-block;
   width: 24%;
-  height: 95px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  height: 90px;
 }
 footer .footer_contact .footer_social a i {
   font-size: 26px;
   padding-top: 30px;
   color: #b5b5b5;
 }
+footer .footer_contact .footer_social .facebook {
+  background: url("../img/facebook-dark.png") center center no-repeat;
+}
+footer .footer_contact .footer_social .twitter {
+  background: url("../img/twitter-dark.png") center center no-repeat;
+}
+footer .footer_contact .footer_social .youtube {
+  background: url("../img/youtube-dark.png") center center no-repeat;
+}
+footer .footer_contact .footer_social .google {
+  background: url("../img/google-plus-dark.png") center center no-repeat;
+}
 footer .footer_contact .footer_social .facebook:hover {
-  background-color: green;
+  background: url("../img/facebook.png") center center no-repeat;
+  background-color: #3b5998;
 }
 footer .footer_contact .footer_social .twitter:hover {
-  background-color: green;
+  background: url("../img/twitter.png") center center no-repeat;
+  background-color: #1da1f2;
 }
 footer .footer_contact .footer_social .youtube:hover {
-  background-color: green;
+  background: url("../img/youtube.png") center center no-repeat;
+  background-color: #e62117;
 }
 footer .footer_contact .footer_social .google:hover {
-  background-color: green;
+  background: url("../img/google-plus.png") center center no-repeat;
+  background-color: #ea4335;
 }
 footer .footer_contact .our_logo {
   padding: 0;
@@ -664,7 +639,47 @@ footer .footer_contact .our_logo .otakoyi img {
   left: 390px;
   top: 40px;
 }
-/*============    ШРИФТЫ    ===========*/
+/*============    Додаткові кнопки    ===========*/
+section#button_contact_us a {
+  width: 200px;
+  height: 55px;
+  position: fixed;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  top: 60%;
+  right: -70px;
+  z-index: 100;
+  background: #4ab848;
+  padding: 17px 12px 17px 66px;
+  cursor: pointer;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+section#button_contact_us i {
+  display: block;
+  width: 54px;
+  height: 50px;
+  background: url("../img/information.png") center center no-repeat;
+  background-color: #42a541;
+  position: relative;
+  right: 68px;
+  top: -35px;
+  z-index: 100;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+section#button_contact_us:hover a {
+  background-color: #42a541;
+}
 /*============    ШРИФТЫ    ===========*/
 /*============    ШРИФТЫ    ===========*/
 /*============    ШРИФТЫ    ===========*/

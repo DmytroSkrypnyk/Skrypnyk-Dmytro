@@ -31,6 +31,30 @@
 	@footer_eyar: #bfbfbf;
 	@dark_ocean: #0D8E8E;
 	@dropdawn_li: #ADF4F4;
+	@twiter: #1da1f2;
+	@facebook: #3b5998;
+	@google: #ea4335;
+	@youtube: #e62117;
+	@mask: #7e7e7e;
+	@button_green: #42a541;
+		
+
+		// набір правил для плейсхолдерів (колір тексту)
+		.search-input::-webkit-input-placeholder {
+			color: @ocean;
+		}
+
+		.search-input:-moz-placeholder {
+			color: @ocean;
+		}
+
+		.search-input::-moz-placeholder {
+			color: @ocean;
+		}
+
+		.search-input:-ms-input-placeholder {
+			color: @ocean;
+		}
 
 /*============    Загальні    ===========*/
 	a:hover,
@@ -210,10 +234,7 @@
 						}
 						.dropdown_menu_li{
 							background-color: @dropdawn_li;
-							width: 100%;
-							// -webkit-transition: all .35s ease;
-							// -o-transition: all .35s ease;
-							// transition: all .35s ease;		
+							width: 100%;								
 							a{
 								color: @ocean;
 							}
@@ -221,123 +242,42 @@
 						
 					}	
 				}
-				.sb-search {
-					position: relative;
-					margin-top: 10px;
-					width: 0%;
-					min-width: 60px;
-					height: 60px;
-					float: right;
-					overflow: hidden;
-					-webkit-transition: width 0.3s;
-					-moz-transition: width 0.3s;
-					transition: width 0.3s;
-					-webkit-backface-visibility: hidden;
-				}
-
-				.sb-search-input {
-					position: absolute;
-					top: 0;
-					right: 0;
-					border: none;
-					outline: none;
-					background: #fff;
-					width: 100%;
-					height: 60px;
-					margin: 0;
-					z-index: 10;
-					padding: 20px 65px 20px 20px;
-					font-family: inherit;
-					font-size: 20px;
-					color: #2c3e50;
-				}
-
-				.sb-search-input::-webkit-input-placeholder {
-					color: #efb480;
-				}
-
-				.sb-search-input:-moz-placeholder {
-					color: #efb480;
-				}
-
-				.sb-search-input::-moz-placeholder {
-					color: #efb480;
-				}
-
-				.sb-search-input:-ms-input-placeholder {
-					color: #efb480;
-				}
-
-				.sb-icon-search,
-				.sb-search-submit  {
-					width: 60px;
-					height: 60px;
-					display: block;
-					position: absolute;
-					right: 0;
-					top: 0;
-					padding: 0;
-					margin: 0;
-					line-height: 60px;
-					text-align: center;
+				.search{
+					padding-left: 0;
 					cursor: pointer;
+					background: transparent;
+					width: 10px;					
+					margin-top: 10px;
+					position: relative;
+					right: -74px;								
+					input[type=text] {
+						background: url('../img/search_icon.png') center left no-repeat;
+						cursor: pointer;
+					    position: relative;
+						top: 1px;
+						right: 1px;
+					    width: 10px;
+					    background-color: red;
+					    box-sizing: border-box;
+					    border: none;				    
+					    font-size: 16px;
+					    background-color: @ocean;
+					    padding: 12px 0px 12px 40px;
+					    -webkit-transition: width 0.4s ease-in-out;
+    					transition: width 0.4s ease-in-out;    					
+					    &:focus {
+					    	background-color: @light_ocean;
+					    	position: absolute;				    	
+						    width: 400px;
+						    outline: none;
+						    border: 1px solid @bottom_border;
+						    border-radius: 5px;
+						    top: 0px;
+						    right: 20%;						    
+						}
+
+					}				
 				}
-
-				.sb-search-submit {
-					background: #fff; /* äëÿ IE */
-					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
-				    filter: alpha(opacity=0); /* IE 5-7 */
-				    opacity: 0;
-					color: transparent;
-					border: none;
-					outline: none;
-					z-index: -1;
-				}
-
-				.sb-icon-search {
-					color: #fff;
-					background: #e67e22;
-					z-index: 90;
-					font-size: 22px;
-					font-family: 'icomoon';
-					speak: none;
-					font-style: normal;
-					font-weight: normal;
-					font-variant: normal;
-					text-transform: none;
-					-webkit-font-smoothing: antialiased;
-				}
-
-				.sb-icon-search:before {
-					content: "\e000";
-				}
-
-				.sb-search.sb-search-open,
-				.no-js .sb-search {
-					width: 100%;
-				}
-
-				.sb-search.sb-search-open .sb-icon-search,
-				.no-js .sb-search .sb-icon-search {
-					background: #da6d0d;
-					color: #fff;
-					z-index: 11;
-				}
-
-				.sb-search.sb-search-open .sb-search-submit,
-				.no-js .sb-search .sb-search-submit {
-					z-index: 90;
-				}
-
-
-																.second_line_search{
-																	.search_a{
-																		position: relative;
-																		padding-top: 23px;
-																		padding-left: 74px;
-																	}    
-																}				
-				
 			}
 		}
 		.header_brad{
@@ -630,8 +570,28 @@
 		
 	}
 
-/*============    Footer    ===========                             ПЕРЕВІРИТИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*============    Footer    ===========*/
 	footer{
+		#button_up{
+			position: relative;			
+		    left: 90%;
+		    top: 92px;
+		    width: 50px;
+		    height: 50px;
+		    background: @ocean;
+		    z-index: 999;
+		    bottom: 10px;
+		    cursor: pointer;
+		    text-align: center;
+		    a{
+		    	display: block;
+		    	width: 50px;
+		    	height: 50px;
+		    	background: url("../img/arrow_top.png") center center no-repeat;
+
+		    }    
+		    
+		}
 		background-color: @footer_black;
 		.footer_top{
 			border-bottom: 2px solid @footer_bottom_border;
@@ -673,28 +633,43 @@
 				a{
 					display: inline-block;
 					width: 24%;
-					height: 95px;
-					-webkit-transition: all .3s ease;
-				    -o-transition: all .3s ease;
-				    transition: all .3s ease;
-
+					height: 90px;
 					i{
 						font-size: 26px;
 						padding-top: 30px;
 						color: @light_grey;					
 					}					
 				}
+				.facebook{
+					background: url("../img/facebook-dark.png") center center no-repeat;
+					
+				}
+				.twitter{
+					background: url("../img/twitter-dark.png") center center no-repeat;
+					
+				}
+				.youtube{
+					background: url("../img/youtube-dark.png") center center no-repeat;
+					
+				}
+				.google{
+					background: url("../img/google-plus-dark.png") center center no-repeat;
+				}
 				.facebook:hover{
-					background-color: green;				
+					background: url("../img/facebook.png") center center no-repeat;					
+					background-color: @facebook;				
 				}
 				.twitter:hover{
-					background-color: green;				
+					background: url("../img/twitter.png") center center no-repeat;
+					background-color: @twiter;				
 				}
 				.youtube:hover{
-					background-color: green;				
+					background: url("../img/youtube.png") center center no-repeat;
+					background-color: @youtube;				
 				}
 				.google:hover{
-					background-color: green;				
+					background: url("../img/google-plus.png") center center no-repeat;
+					background-color: @google;									
 				}
 			}
 			.our_logo{
@@ -717,7 +692,54 @@
 			}
 		}
 	}
-/*============    ШРИФТЫ    ===========*/
+
+/*============    Додаткові кнопки    ===========*/
+	section#button_contact_us{
+		a{
+			width: 200px;
+			height: 55px;
+			position: fixed;
+		    text-transform: uppercase;
+		    .bold;
+		    color: @white;
+		    top: 60%;
+		    right: -70px;
+		    z-index: 100;
+		    background: @light_green;
+		    padding: 17px 12px 17px 66px;
+		    cursor: pointer;	    
+		    -webkit-transform: rotate(-90deg);
+		    -moz-transform: rotate(-90deg);
+		    -o-transform: rotate(-90deg);
+		    transform: rotate(-90deg);	    
+		    -webkit-transition: all 0.5s ease;
+		    -o-transition: all 0.5s ease;
+		    transition: all 0.5s ease;
+		}
+		i{
+			display: block;
+			width: 54px;
+			height: 50px;
+			background: url("../img/information.png") center center no-repeat;
+			background-color: @button_green;
+			position: relative;
+			right: 68px;
+			top: -35px;
+		    z-index: 100;
+		    -webkit-transform: rotate(90deg);
+		    -moz-transform: rotate(90deg);
+		    -o-transform: rotate(90deg);
+		    transform: rotate(90deg);
+		}
+		&:hover{
+			a{
+				background-color: @button_green;
+			}
+		}		
+	}
+
+	
+
 
 /*============    ШРИФТЫ    ===========*/
 

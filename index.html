@@ -23,7 +23,7 @@
 </head>
 <body>
    <header>
-      <div class="container-fluid">
+      <div id="top" class="container-fluid">
          <div class="row top_line">
             <div class="col-md-3 col-lg-3">
                <img src="img/logotype.png" alt="Logotype">
@@ -77,7 +77,7 @@
          <div class="row line_top_menu">
             <div class="second_line">
                <div class="col-lg-11 second_line_nav">
-                  <ul class="top_nav ">                     
+                  <ul class="top_nav">                     
                      <li class="dropdown">
                         <a class="dropdown-toggle"
                             id="clinic_menu"
@@ -141,16 +141,13 @@
                      <li><a href="#">Blogs</a></li>
                      <li><a href="#">Contact</a></li>
                      <li class="hidden-lg"><a href="">more</a></li>
-                  </ul>
+                  </ul>                  
                </div>
-
-               <div id="sb-search" class="sb-search">
+               <div class="search col-lg-1">                  
                   <form>
-                     <input class="sb-search-input" placeholder="Что будет искать?" type="text" value="" name="search" id="search">
-                     <input class="sb-search-submit" type="submit" value="">
-                     <span class="sb-icon-search"></span>
+                     <input class="search-input" type="text" name="search" placeholder="Search..">
                   </form>
-               </div>
+               </div>               
             </div>
          </div> 
          <div class="row header_brad">
@@ -327,9 +324,12 @@
    </section>
 
    <footer>
+                  <div id="button_up">    <!-- кнопка up -->
+                     <a href="#top"></a>
+                  </div>
       <div class="container-fluid">
          <div class="footer_top">
-            <div class="row footer_info">
+            <div class="row footer_info">                  
                <div class="col-md-2 col-lg-2">
                      <ul>
                         <li><span>Clinic</span></li>
@@ -392,16 +392,14 @@
                <div class="social">
                   <div class="footer_social">
                      <a href="#" class="facebook text-center">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                       
                      </a>
                      <a href="#" class="twitter text-center">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
                      </a>
                      <a href="#" class="youtube text-center">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
                      </a>
                      <a href="#" class="google text-center">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                        
                      </a>
                   </div>
                </div>
@@ -416,13 +414,45 @@
       </div>      
    </footer>
 
+   <!-- Додаткові кнопки -->
+      <section id="button_contact_us">
+         <a class="contact_us">
+            <span>contact us</span>
+            <i class="information_icon">             
+         </a>
+      </section>
+
+      
+
+      
+         
+
     
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap.min.js"></script>
-   <script src="js/classie.js"></script>
-   <script src="js/uisearch.js"></script>    
+   
+   <script>
+         new UISearch( document.getElementById( 'sb-search' ) );
+      </script>
+   <script>
+        $(document).ready(function(){
+          $("#button_up").on("click","a", function (event) {
+            //отменяем стандартную обработку нажатия по ссылке
+            event.preventDefault();
+
+            //забираем идентификатор бока с атрибута href
+            var id  = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+              top = $(id).offset().top;
+            
+            //анимируем переход на расстояние - top за 1500 мс
+            $('body,html').animate({scrollTop: top}, 1000);
+          });
+        });
+      </script>  
 
 
 </body>
