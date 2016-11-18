@@ -77,18 +77,73 @@
          <div class="row line_top_menu">
             <div class="second_line">
                <div class="col-lg-11 second_line_nav">
-                  <ul class="top_nav ">
-                     <li><a href="#">Clinic<span class="caret"></span></a></li>
-                     <li><a href="#">About infertility<span class="caret"></span></a></li>
-                     <li><a href="#">Treatments<span class="caret"></span></a></li>
+                  <ul class="top_nav ">                     
+                     <li class="dropdown">
+                        <a class="dropdown-toggle"
+                            id="clinic_menu"
+                            href="#"
+                            data-toggle="dropdown">
+                            Clinic<span class="caret"></span>
+                        </a>
+                        <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
+                              <ul class="dropdown-menu" aria-labelledby="clinic_menu">                        
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">About us</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Why us</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Our Certificates</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Our Team</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Success Rates</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Location</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">3-D Clinic Tour</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Photo Gallery</a></li>
+                              </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle"
+                            id="infertility_menu"
+                            href="#"
+                            data-toggle="dropdown">About infertility<span class="caret"></span></a>
+                        <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
+                              <ul class="dropdown-menu" aria-labelledby="infertility_menu">
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Causes of infertility</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Female infertility</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Male infertility</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Female infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Male infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Genetic Diagnostics</a></li>
+                              </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle"
+                            id="treatments_menu"
+                            href="#"
+                            data-toggle="dropdown">Treatments<span class="caret"></span></a>
+
+                            <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
+                              <ul class="dropdown-menu" aria-labelledby="treatments_menu">
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Fertility treatment methods</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Infertility treatment Programs</a></li>
+                              </ul>
+                     </li>
                      <li><a href="#">Prices</a></li>
-                     <li><a href="#">International Patient Care<span class="caret"></span></a></li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle"
+                            id="patient_menu"
+                            href="#"
+                            data-toggle="dropdown">International Patient Care<span class="caret"></span></a>
+                            <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
+                              <ul class="dropdown-menu" aria-labelledby="patient_menu">
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">First visit</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">Care and assistance</a></li>
+                                 <li class="dropdown_menu_li"><a class="dropdown_menu_a" href="#">International patients accommodation</a></li>
+                              </ul>
+                     </li>
                      <li><a href="#">Patient success stories</a></li>
                      <li><a href="#">Blogs</a></li>
                      <li><a href="#">Contact</a></li>
                      <li class="hidden-lg"><a href="">more</a></li>
                   </ul>
                </div>
+
                <div class="col-lg-1 second_line_search">
                   <a href="#"><img src="img/search_icon.png" alt="Search icon" class="search_a"></a>
                </div>

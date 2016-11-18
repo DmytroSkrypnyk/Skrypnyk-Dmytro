@@ -189,6 +189,13 @@ header .line_top_menu .second_line .second_line_nav .top_nav li a {
 header .line_top_menu .second_line .second_line_nav .top_nav li:hover {
   background-color: #0d8e8e;
 }
+header .line_top_menu .second_line .second_line_nav .top_nav .dropdown_menu_li {
+  background-color: #adf4f4;
+  width: 100%;
+}
+header .line_top_menu .second_line .second_line_nav .top_nav .dropdown_menu_li a {
+  color: #11b2b2;
+}
 header .line_top_menu .second_line .second_line_search .search_a {
   position: relative;
   padding-top: 23px;

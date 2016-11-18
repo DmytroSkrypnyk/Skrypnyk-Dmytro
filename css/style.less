@@ -30,6 +30,7 @@
 	@footer_bottom_border: #4d4d4d;
 	@footer_eyar: #bfbfbf;
 	@dark_ocean: #0D8E8E;
+	@dropdawn_li: #ADF4F4;
 
 /*============    Загальні    ===========*/
 	a:hover,
@@ -184,8 +185,7 @@
 			margin-bottom: 0;			
 			.second_line{				
 				.my_padding;
-				.second_line_nav{
-					
+				.second_line_nav{					
 					.top_nav{
 						position: relative;
 						padding-left: 0;
@@ -208,6 +208,17 @@
 								background-color: @dark_ocean;
 							}
 						}
+						.dropdown_menu_li{
+							background-color: @dropdawn_li;
+							width: 100%;
+							// -webkit-transition: all .35s ease;
+							// -o-transition: all .35s ease;
+							// transition: all .35s ease;		
+							a{
+								color: @ocean;
+							}
+						}
+						
 					}	
 				}
 				.second_line_search{
