@@ -430,15 +430,15 @@ section#main .egg_catalogs img {
 section#main .my_carousel_control_left {
   height: 52px;
   width: 52px;
-  position: absolute;
+  position: absolut;
   left: -17px;
-  top: 130px;
+  top: 125px;
 }
 section#main .my_carousel_control_left .carousel_control {
   display: block;
   width: 52px;
   height: 52px;
-  background: #919fb3;
+  background: #959fb3;
 }
 section#main .my_carousel_control_left .carousel_control i {
   font-size: 50px;
@@ -451,14 +451,14 @@ section#main .my_carousel_control_right {
   height: 52px;
   width: 52px;
   position: absolute;
-  left: 443px;
-  top: 130px;
+  left: 93%;
+  top: 125px;
 }
 section#main .my_carousel_control_right .carousel_control {
   display: block;
   width: 52px;
   height: 52px;
-  background: #919fb3;
+  background-color: #959fb3;
 }
 section#main .my_carousel_control_right .carousel_control i {
   font-size: 50px;
@@ -766,7 +766,6 @@ section#button_contact_us:hover a {
     top: 37px;
   }
 }
-/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
 @media (min-width: 769px) and (max-width: 992px) {
   header .top_line {
     width: 100%;
