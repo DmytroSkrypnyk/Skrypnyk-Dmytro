@@ -774,6 +774,7 @@ section#button_contact_us:hover a {
     height: 50px;
   }
   header .top_line {
+    margin-bottom: 10px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -786,6 +787,7 @@ section#button_contact_us:hover a {
     position: absolute;
     top: 10px;
     right: 75px;
+    z-index: 15;
   }
   header .line_top_menu {
     position: absolute;
@@ -829,10 +831,17 @@ section#button_contact_us:hover a {
     padding-left: 15px;
     color: #415959;
   }
+  header .header_brad {
+    height: 150px;
+  }
   header .header_brad .header_breadcrumb {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+  header .header_brad .title h1 {
+    font-size: 40px;
+    margin-top: 0;
   }
   section#main .main_row {
     width: 100%;
@@ -841,14 +850,14 @@ section#button_contact_us:hover a {
   }
   section#main .main_row .aside {
     box-shadow: 0 1px 5px 1px rgba(63, 83, 83, 0.25);
+    background-color: #ffffff;
     width: 330px;
-    height: 34px;
-    position: relative;
+    height: 702px;
+    position: absolute;
     cursor: pointer;
     float: left;
-    left: -40px;
-    top: 0;
-    background: url("../img/circle.png") center right no-repeat;
+    left: -25px;
+    top: 225px;
     z-index: 11;
     -webkit-transform: translateX(-265px);
     -ms-transform: translateX(-265px);
@@ -857,6 +866,15 @@ section#button_contact_us:hover a {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+  section#main .main_row .aside .aside_img a {
+    display: block;
+    height: 30px;
+    width: 10px;
+    z-index: 15;
+    float: right;
+    margin-right: -6px;
+    margin-top: 10px;
   }
   section#main .main_row .aside:hover {
     -webkit-transform: translateX(0px);
@@ -873,6 +891,9 @@ section#button_contact_us:hover a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  section#main .main_row .aside .aside_nav .aside_nav_ul {
+    margin-right: 10px;
+  }
   section#main .main_row .aside .aside_nav .aside_nav_ul li {
     border: none;
     margin-right: 32px;
@@ -881,6 +902,7 @@ section#button_contact_us:hover a {
   }
   section#main .main_right {
     padding-left: 60px;
+    margin-top: 160px;
   }
   footer .footer_top .footer_info {
     width: 100%;
