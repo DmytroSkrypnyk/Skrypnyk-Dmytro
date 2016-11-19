@@ -74,15 +74,29 @@
                </div>
             </div>
          </div>
+         <!--======================= блок всього меню і випадаючих списків =========================-->
          <div class="row line_top_menu">
-            <div class="second_line">
-               <div class="col-md-10 col-lg-11 second_line_nav">
-                  <ul class="top_nav">                     
+            <div class="second_line container-fluid">
+               <div class="navbar-header second_line_dropdawn">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  
+                </div>
+
+               <div class="col-md-10 col-lg-11 second_line_nav collapse navbar-collapse" id="navbar-collapse">
+                  <ul class="top_nav nav navbar-nav">                     
                      <li class="dropdown">
                         <a class="dropdown-toggle"
                             id="clinic_menu"
                             href="#"
-                            data-toggle="dropdown">
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">
                             Clinic<span class="caret"></span>
                         </a>
                         <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
@@ -101,7 +115,10 @@
                         <a class="dropdown-toggle"
                             id="infertility_menu"
                             href="#"
-                            data-toggle="dropdown">About infertility<span class="caret"></span></a>
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">About infertility<span class="caret"></span></a>
                         <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
                               <ul class="dropdown-menu" aria-labelledby="infertility_menu">
                                  <li class="dropdown_menu_li"><a href="#">Causes of infertility</a></li>
@@ -116,7 +133,10 @@
                         <a class="dropdown-toggle"
                             id="treatments_menu"
                             href="#"
-                            data-toggle="dropdown">Treatments<span class="caret"></span></a>
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">Treatments<span class="caret"></span></a>
 
                             <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
                               <ul class="dropdown-menu" aria-labelledby="treatments_menu">
@@ -129,7 +149,10 @@
                         <a class="dropdown-toggle"
                             id="patient_menu"
                             href="#"
-                            data-toggle="dropdown">International Patient Care<span class="caret"></span></a>
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">International Patient Care<span class="caret"></span></a>
                             <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
                               <ul class="dropdown-menu" aria-labelledby="patient_menu">
                                  <li class="dropdown_menu_li"><a href="#">First visit</a></li>
@@ -140,11 +163,14 @@
                      <li class="hidden-md"><a href="#">Patient success stories</a></li>
                      <li class="hidden-md"><a href="#">Blogs</a></li>
                      <li class="hidden-md"><a href="#">Contact</a></li>
-                     <li class="dropdown hidden-lg">
+                     <li class="dropdown hidden-lg hidden-sm">
                         <a class="dropdown-toggle"
                             id="more_menu"
                             href="#"
-                            data-toggle="dropdown">More<span class="caret"></span></a>
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">More<span class="caret"></span></a>
                             <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
                               <ul class="dropdown-menu" aria-labelledby="more_menu">
                                  <li class="dropdown_menu_li"><a href="#">Patient success stories</a></li>
@@ -154,13 +180,14 @@
                      </li>                                         
                   </ul>                  
                </div>
-               <div class="search col-md-2 col-lg-1">                  
+               <div class="search hidden-sm hidden-xs col-md-2 col-lg-1">                  
                   <form>
                      <input class="search-input" type="text" name="search" placeholder="Search..">
                   </form>
                </div>               
             </div>
          </div> 
+         <!--======================= кінець блоку всього меню і випадаючих списків =========================-->
          <!--====================== breadcrumb lg =======================-->
          <div class="row header_brad visible-lg">
             <div class="row header_breadcrumb">
@@ -188,10 +215,12 @@
       </div>
    </header>
 
+   
+
    <section id="main">
       <div class="container-fluid">
          <div class="row main_row">
-            <div class="col-md-3 col-lg-3">
+            <div class="col-md-3 col-lg-3 aside" id="aside_show">              
                <div class="aside_nav">
                   <ul class="aside_nav_ul">
                      <li><a href="#">IFV</a></li>
@@ -212,7 +241,7 @@
                      <li class="last"><a href="#">Surrogacy</a></li>
                   </ul>
                </div>
-               <div class="aside_form">
+               <div class="aside_form hidden-sm">
                   <div class="aside_form_control">
                      <form action="#"> 
                      <h3>Contact Us</h3>
@@ -220,7 +249,7 @@
                      <input type="email" class="form-control aside_form_input" placeholder="Your Email"> 
                      <input type="tel" class="form-control aside_form_input" placeholder="With country code,  ex.+ 39">
                      <input type="text" list="country" class="form-control aside_form_input" placeholder="I am interested in">   
-                        <datalist id="country">
+                        <datalist id="prosedure">
                            <option value="IFV">
                            <option value="ICSI">
                            <option value="Egg donation">
@@ -231,7 +260,7 @@
                   </form>
                   </div>                               
                </div> 
-               <div class="aside_img">
+               <div class="aside_img hidden-sm">
                   <img src="img/banner.jpg" alt="baner">
                </div>             
             </div>
@@ -329,9 +358,9 @@
 
             <!--=================== Кінець блоку =====================-->
 
-            <!--  ========даний блок буде видно на середніх екранах======== -->
+            <!--  ========даний блок буде видно на середніх і малих екранах======== -->
 
-            <div class="col-md-9 visible-md">
+            <div class="col-sm-12 col-md-9 hidden-lg main_right">
                <div class="row egg_catalogs">
                   <div class="col-md-5">
                      <h3>Egg donor cata-logs</h3>
@@ -340,7 +369,7 @@
                      <p>IVF (in vitro fertlisation) involves retrieving</p>
                      <div class="show_database_btn"><a href="#">Show database</a></div>
                   </div>
-                  <div class="col-md-7">
+                  <div class="col-sm-12 col-md-7">
                      <div id="carousel-main-generic4" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -379,7 +408,7 @@
                   </div>
                </div>
                <div class="row egg_catalogs">
-                  <div class="col-md-5">
+                  <div class="col-sm-12 col-md-5">
                      <h3>Sperm donor catalogs</h3>
                      <p>IVF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal</p>
                      <p>pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.</p>
@@ -388,7 +417,7 @@
                         <a href="#">Show database</a>
                      </div>
                   </div>
-                  <div class="col-md-7">
+                  <div class="col-sm-12 col-md-7">
                      <div id="carousel-main-generic3" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -434,19 +463,57 @@
       </div>
    </section>
 
+   
+  
+
+   <section id="contact_form" class="hidden-md hidden-lg">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+               <div class="aside_form">
+                  <div class="aside_form_control">
+                     <form action="#"> 
+                     <h3>Contact Us</h3>
+                     <input type="text" class="form-control aside_form_input" placeholder="Your Name"> 
+                     <input type="email" class="form-control aside_form_input" placeholder="Your Email"> 
+                     <input type="tel" class="form-control aside_form_input" placeholder="With country code,  ex.+ 39">
+                     <input type="text" list="country" class="form-control aside_form_input" placeholder="I am interested in">   
+                        <datalist id="country">
+                           <option value="IFV">
+                           <option value="ICSI">
+                           <option value="Egg donation">
+                           <option value="PGD">
+                           <option value="Other">
+                       </datalist>
+                     <button type="submit" class="btn btn-default aside_form_btn">Send</button>
+                  </form>
+                  </div>                               
+               </div> 
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="aside_img">
+                  <img src="img/banner.jpg" alt="baner">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
    <section id="program">
       <div class="container-fluid">
          <div class="row program_class">
             <h3><span>Infertility treatment</span> Programs</h3>
-            <div class="col-md-4 col-lg-4 program_container">
+            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF + ICSI</h4>
                <a href="#">Read more</a>
             </div>
-            <div class="col-md-4 col-lg-4 program_container">
+            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF+ ICSI with storage</h4>
                <a href="#">Read more</a>
             </div>
-            <div class="col-md-4 col-lg-4 program_container">
+            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF with fresh donor oocytes</h4>
                <a href="#">Read more</a>
             </div>

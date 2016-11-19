@@ -232,13 +232,16 @@
 								.bold;
 								position: relative;
 							    display: block;							   
-							    color: #fff;
+							    color: @white;
 							    text-transform: uppercase;
 							    font-size: 14px;							    
 							    padding: 21px 9px;
 							}
-							&:hover{
-								background-color: @dark_ocean;
+							&:hover,
+							&:focus,
+							&:active,
+							a:visited{
+								background-color: @dark_ocean;								
 							}
 						}
 						.dropdown_menu_li{
@@ -849,24 +852,141 @@
 }
 
 @media(min-width:769px) and (max-width:992px) {
-	header{		
+	header{
+		height: 50px;		
 		.top_line{
 			.dell_padding;
-		}
-		.line_top_menu{			
-			.second_line{				
-				.dell_padding;
+			padding-top: 10px;
+			.top_line_logo{
+				padding-left: 0;
+				
 			}
+			.top_line_select_btn {
+			    position: absolute;
+			    top: 10px;
+			    right: 75px;
+			}
+		}
+		.line_top_menu{
+			position: absolute;
+			background: transparent;
+		    top: 9px;
+		    right: 11px;
+		    height: 57px;
+		    width: 100%;
+		    border: none;
+		    z-index: 10;
+		    padding-right: 0;
+		    padding-left: 0;
+		  
+			// &:focus,
+			// &:active,
+			// a:visited{
+			// 	background-color: @dark_ocean;								
+			// }			
+			.second_line{
+				padding-right: 0;
+			    padding-left: 0;				
+				.dell_padding;
+				.second_line_dropdawn{
+
+					button{					
+						span{
+							background-color: @ocean;
+							height: 3px;
+	    					width: 30px;
+	    					margin-bottom: 7px;						
+						}
+					}
+					
+				}
+				.second_line_nav{
+					padding-right: 0;
+					padding-left: 0;
+					.top_nav{
+						margin-left: 0;
+						margin-right: 0;
+						height: 100%;
+						width: 100%;
+						li{
+							width: 100%;
+							a{
+								padding-left: 15px;
+								color: @dark_okean;
+							}
+						}
+					}
+				}
+			}			
 		}
 		.header_brad{
 			.header_breadcrumb{
 				.dell_padding;
 			}
 		}
+
 	}
-	section#main{		
+	section#main{
+				
 		.main_row{
 			.dell_padding;
+
+			.aside{
+				box-shadow: 0 1px 5px 1px rgba(63, 83, 83, 0.25);				
+				width: 330px;
+				height: 34px;
+				position: relative;
+				cursor: pointer;
+				float: left;
+				left: -40px;
+				top: 0;
+				background: url("../img/circle.png") center right no-repeat;
+				z-index: 11;
+				
+				-webkit-transform: translateX(-265px);
+				-ms-transform: translateX(-265px);
+				-o-transform: translateX(-265px);
+				transform: translateX(-265px);
+				-webkit-transition: all 0.3s ease-in-out;
+				-o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;	
+
+
+
+				&:hover{
+					-webkit-transform: translateX(0px);
+					-ms-transform: translateX(0px);
+					-o-transform: translateX(0px);
+					transform: translateX(0px);
+				}
+
+				.aside_nav{				
+				width: 300px;
+				background: @white;
+				z-index: 5;
+				overflow: hidden;				
+				-webkit-transition: all 0.3s ease-in-out;
+				-o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;					
+					.aside_nav_ul{
+						li{
+							border: none;
+							margin-right: 32px;
+							padding-top: 10px;
+							padding-bottom: 10px;
+						}						
+					}
+				}
+			}
+			#aside_show{
+				.hide_my_aside {
+						
+				        
+				    	}
+			}			
+		}
+		.main_right{
+			padding-left: 60px;
 		}
 	}
 	footer{
