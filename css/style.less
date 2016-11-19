@@ -37,6 +37,7 @@
 	@youtube: #e62117;
 	@mask: #7e7e7e;
 	@button_green: #42a541;
+	@header_bottom: #009a9a;
 		
 
 		// набір правил для плейсхолдерів (колір тексту)
@@ -77,6 +78,11 @@
 		margin-left: auto;
 		margin-right: auto; 
 	}
+	.dell_padding{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto; 
+	}
 	h3{
 		color: @ocean;
 		font-size: 30px;
@@ -87,6 +93,7 @@
 
 /*============    Header    ===========*/
 	header{
+		
 		.top_line{
 			height: 65px;
 			padding-top: 20px;
@@ -175,6 +182,7 @@
 			padding-top: 13px;
 			.top_line_dropdown{
 				.top_line_dropdown_btn{
+					padding-left: 12px;
 					border: none;
 					.bold;
 					-webkit-transition: all .35s ease;
@@ -206,6 +214,7 @@
 		}
 		.line_top_menu{
 			background-color: @ocean;
+			border-bottom: 4px solid @header_bottom;
 			margin-bottom: 0;			
 			.second_line{				
 				.my_padding;
@@ -297,6 +306,7 @@
 						color: @white;
 						font-size: 14px;
 						a{
+							text-decoration: underline;
 							color: @white;
 							font-size: 14px;							
 						}
@@ -423,6 +433,7 @@
 				color: @dark_okean;
 				margin-bottom: 25px;
 				font-size: 16px;
+				line-height: 24px;
 			}
 			.show_database_btn{
 				margin-bottom: 60px;
@@ -673,7 +684,10 @@
 				}
 			}
 			.our_logo{
+				position: relative;
 				padding: 0;
+				padding-right: 30px;
+				margin-left: 0px;
 				.otakoyi{
 					span{
 						color: @light_grey;
@@ -685,7 +699,7 @@
 					}
 					img{
 						position: absolute;
-						left: 390px;
+						left: 370px;
     					top: 40px;    					
 					}
 				}
@@ -738,24 +752,92 @@
 		}		
 	}
 
-	
-
-
 /*============    ШРИФТЫ    ===========*/
+/*============    	Адаптація    ===========*/
+@media(min-width:993px) and (max-width:1200px) {	
+	header{		
+		.top_line{
+			.dell_padding;
+			.top_line_logo{
+				padding-left: 0px;
+			}			   
+			
+			.header_contact{
+				padding-left: 20%;
+			}
+			.top_line_btn{
+				padding-left: 5%;
+			}
+			.top_line_select_btn{								
+				.top_line_dropdown{					
+				    cursor: pointer;				    
+				    position: absolute;
+				    z-index: 100;
+				    right: 15px;
+				    top: 15px;
+				}
+			}
+		}
+		.line_top_menu{			
+			.second_line{				
+				.dell_padding;
+			
+			.search{
+				float: right;
+				margin-top: 0px;    			
+    			right: 43px;
+    			top: 8px;
+			}
+			}
+		}
 
-/*============    ШРИФТЫ    ===========*/
-
-/*============    ШРИФТЫ    ===========*/
-
-/*============    ШРИФТЫ    ===========*/
-
-/*============    ШРИФТЫ    ===========*/
-
-/*============    ПОДВАЛ    ===========*/
+		.header_brad{
+			.header_breadcrumb{
+				.dell_padding;
+			}
+		}
+	}
+	section#main{		
+		.main_row{
+			.dell_padding;
+		}
+	}
+	footer{
+		.footer_top{			
+			.footer_info{			
+				.dell_padding;
+			}
+		}
+		.footer_contact{
+			.dell_padding;
+			.our_logo{
+				margin-left: 100px;
+				padding: 0;
+				width: 170px;
+				.otakoyi{
+					span{
+						
+						float: right;
+						padding-top: 25px;
+						text-align: right;
+						strong{
+							color: @footer_eyar;
+						}						
+					}
+					img{
+						position: absolute;
+						left: 178px;
+    					top: 37px;    					
+					}
+				}
+			}
+		}
+	}
+}
 
 /*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
 
-/*============    	АДАПТИВ    ===========*/
+
 
 @media(min-width:0px) and (max-width:320px) {
 	
@@ -770,12 +852,38 @@
 }
 
 @media(min-width:769px) and (max-width:992px) {
-	
+	header{		
+		.top_line{
+			.dell_padding;
+		}
+		.line_top_menu{			
+			.second_line{				
+				.dell_padding;
+			}
+		}
+		.header_brad{
+			.header_breadcrumb{
+				.dell_padding;
+			}
+		}
+	}
+	section#main{		
+		.main_row{
+			.dell_padding;
+		}
+	}
+	footer{
+		.footer_top{			
+			.footer_info{			
+				.dell_padding;
+			}
+		}
+		.footer_contact{
+			.dell_padding;}
+	}
 }
 
-@media(min-width:993px) and (max-width:1200px) {
-	
-}
+
 
 
 

@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-   <title>Заголовок </title>
+   <title>Intersono</title>
 
    <!-- Bootstrap -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
    <header>
       <div id="top" class="container-fluid">
          <div class="row top_line">
-            <div class="col-md-3 col-lg-3">
+            <div class="col-md-3 col-lg-3 top_line_logo">
                <img src="img/logotype.png" alt="Logotype">
             </div>
             <div class="col-md-4 col-lg-3">
@@ -76,7 +76,7 @@
          </div>
          <div class="row line_top_menu">
             <div class="second_line">
-               <div class="col-lg-11 second_line_nav">
+               <div class="col-md-9 col-lg-11 second_line_nav">
                   <ul class="top_nav">                     
                      <li class="dropdown">
                         <a class="dropdown-toggle"
@@ -137,24 +137,48 @@
                                  <li class="dropdown_menu_li"><a href="#">International patients accommodation</a></li>
                               </ul>
                      </li>
-                     <li><a href="#">Patient success stories</a></li>
-                     <li><a href="#">Blogs</a></li>
-                     <li><a href="#">Contact</a></li>
-                     <li class="hidden-lg"><a href="">more</a></li>
+                     <li class="hidden-md"><a href="#">Patient success stories</a></li>
+                     <li class="hidden-md"><a href="#">Blogs</a></li>
+                     <li class="hidden-md"><a href="#">Contact</a></li>
+                     <li class="dropdown hidden-lg">
+                        <a class="dropdown-toggle"
+                            id="more_menu"
+                            href="#"
+                            data-toggle="dropdown">More<span class="caret"></span></a>
+                            <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
+                              <ul class="dropdown-menu" aria-labelledby="more_menu">
+                                 <li class="dropdown_menu_li"><a href="#">Patient success stories</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Blogs</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Contact</a></li>
+                              </ul>
+                     </li>                                         
                   </ul>                  
                </div>
-               <div class="search col-lg-1">                  
+               <div class="search col=md-3 col-lg-1">                  
                   <form>
                      <input class="search-input" type="text" name="search" placeholder="Search..">
                   </form>
                </div>               
             </div>
          </div> 
-         <div class="row header_brad">
+         <!--====================== breadcrumb lg =======================-->
+         <div class="row header_brad visible-lg">
             <div class="row header_breadcrumb">
                <ol class="breadcrumb my_breadcrumb">
                   <li ><a href="#">Home</a></li>
                   <li class="active">Egg and Sperm donor catalogs</li>
+               </ol>
+            </div>
+            <div class="text-center title">
+               <h1>Egg and sperm donor catalogs</h1>
+            </div>
+         </div>
+         <!--====================== breadcrumb md =======================-->
+         <div class="row header_brad visible-md">
+            <div class="row header_breadcrumb">
+               <ol class="breadcrumb my_breadcrumb">
+                  <li ><a href="#">Home</a></li>
+                  <li class="active">About Us</li>
                </ol>
             </div>
             <div class="text-center title">
@@ -211,7 +235,10 @@
                   <img src="img/banner.jpg" alt="baner">
                </div>             
             </div>
-            <div class="col-md-9 col-lg-9">
+
+           <!--  ========даний блок буде видно тільки на великих екранах======== -->
+
+            <div class="col-md-9 col-lg-9 visible-lg">
                <div class="row egg_catalogs">
                   <div class="col-md-5 col-lg-5">
                      <h3>Egg donor catalogs</h3>
@@ -299,6 +326,110 @@
                   </div>
                </div>
             </div>
+
+            <!--=================== Кінець блоку =====================-->
+
+            <!--  ========даний блок буде видно на середніх екранах======== -->
+
+            <div class="col-md-9 visible-md">
+               <div class="row egg_catalogs">
+                  <div class="col-md-5">
+                     <h3>Egg donor cata-logs</h3>
+                     <p>IVF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal</p>
+                     <p>pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.</p>
+                     <p>IVF (in vitro fertlisation) involves retrieving</p>
+                     <div class="show_database_btn"><a href="#">Show database</a></div>
+                  </div>
+                  <div class="col-md-7">
+                     <div id="carousel-main-generic4" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                           <li data-target="#carousel-main-generic4" data-slide-to="0" class="active"></li>
+                           <li data-target="#carousel-main-generic4" data-slide-to="1"></li>
+                           <li data-target="#carousel-main-generic4" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                           <div class="item active">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                           <div class="item">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                           <div class="item">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                        </div>
+
+                         <!-- Controls -->
+                        <a class="left carousel-control my_carousel_control_left" href="#carousel-main-generic4" role="button" data-slide="prev">
+                           <span class="carousel_control to_left">
+                              <i class="fa fa-angle-left" aria-hidden="true"></i>
+                           </span>
+                           <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control my_carousel_control_right" href="#carousel-main-generic4" role="button" data-slide="next">
+                           <span class="carousel_control to_right">
+                              <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           </span>
+                           <span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row egg_catalogs">
+                  <div class="col-md-5">
+                     <h3>Sperm donor catalogs</h3>
+                     <p>IVF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal</p>
+                     <p>pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.</p>
+                     <p>IVF (in vitro fertlisation) involves retrieving</p>
+                     <div class="show_database_btn">
+                        <a href="#">Show database</a>
+                     </div>
+                  </div>
+                  <div class="col-md-7">
+                     <div id="carousel-main-generic3" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                           <li data-target="#carousel-main-generic3" data-slide-to="0" class="active"></li>
+                           <li data-target="#carousel-main-generic3" data-slide-to="1"></li>
+                           <li data-target="#carousel-main-generic3" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                           <div class="item active">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                           <div class="item">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                           <div class="item">
+                              <img src="img/doctor.jpg" alt="doctor">
+                           </div>
+                        </div>
+
+                         <!-- Controls -->
+                        <a class="left carousel-control my_carousel_control_left" href="#carousel-main-generic3" role="button" data-slide="prev">
+                           <span class="carousel_control to_left">
+                              <i class="fa fa-angle-left" aria-hidden="true"></i>
+                           </span>
+                           <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control my_carousel_control_right" href="#carousel-main-generic3" role="button" data-slide="next">
+                           <span class="carousel_control to_right">
+                              <i class="fa fa-angle-right" aria-hidden="true"></i>
+                           </span>
+                           <span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!--=================== Кінець блоку =====================-->
+
          </div>
       </div>
    </section>
@@ -324,9 +455,9 @@
    </section>
 
    <footer>
-                  <div id="button_up">    <!-- кнопка up -->
-                     <a href="#top"></a>
-                  </div>
+      <div id="button_up" class=" visible-lg">    <!-- кнопка up -->
+         <a href="#top"></a>
+      </div>
       <div class="container-fluid">
          <div class="footer_top">
             <div class="row footer_info">                  
@@ -391,20 +522,14 @@
             <div class="col-md-4 col-lg-4">
                <div class="social">
                   <div class="footer_social">
-                     <a href="#" class="facebook text-center">
-                       
-                     </a>
-                     <a href="#" class="twitter text-center">
-                     </a>
-                     <a href="#" class="youtube text-center">
-                     </a>
-                     <a href="#" class="google text-center">
-                        
-                     </a>
+                     <a href="#" class="facebook text-center"></a>
+                     <a href="#" class="twitter text-center"></a>
+                     <a href="#" class="youtube text-center"></a>
+                     <a href="#" class="google text-center hidden-md"></a>
                   </div>
                </div>
             </div>
-            <div class="col-md-3 col-lg-4 our_logo">
+            <div class="col-md-4 col-lg-4 our_logo">
                <div class="otakoyi">
                   <span>Design and Development by <strong>OTAKOYI</strong><img src="img/otakoyi.png" alt="OTAKOYI"></span>
 
@@ -415,7 +540,7 @@
    </footer>
 
    <!-- Додаткові кнопки -->
-      <section id="button_contact_us">
+      <section id="button_contact_us" class="visible-lg">
          <a class="contact_us">
             <span>contact us</span>
             <i class="information_icon">             
