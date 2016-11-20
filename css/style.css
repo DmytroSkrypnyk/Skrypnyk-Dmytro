@@ -2123,3 +2123,11 @@ section#button_contact_us:hover a {
     background-color: #2b2b2b;
   }
 }
+#contact_with_us .header_modal h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+#contact_with_us form input {
+  margin-bottom: 25px;
+}

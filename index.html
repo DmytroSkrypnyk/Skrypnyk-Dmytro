@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-4 col-lg-3 top_line_btn hidden-xs hidden-sm">               
                <div class="sing_up_header">
-                  <a class="btn_sing_up_header" href="#" data-toggle="modal">Sign up for consultation</a>
+                  <a class="btn_sing_up_header" href="#contact_with_us" data-toggle="modal">Sign up for consultation</a>
                </div> 
             </div>
             <div class="col-sm-2 col-md-1 col-lg-1 top_line_select_btn">
@@ -733,11 +733,49 @@
 
    <!-- Додаткові кнопки -->
       <section id="button_contact_us" class="hidden-xs hidden-sm hidden-md">
-         <a class="contact_us">
+         <a class="contact_us" href="#contact_with_us" data-toggle="modal">
             <span>contact us</span>
             <i class="information_icon">             
          </a>         
       </section>
+
+      <!-- Модальне вікно звязатися з нами -->
+        <div class="modal fade" id="contact_with_us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>              
+              </div>
+              <div class="modal-body text-center">
+               <div class="row">
+                <div class="header_modal">
+                  <h4>Залишіть свої дані і ми невдовзі звяжемось з Вами ;)</h4>
+                </div>
+              </div>
+              <div class="row">
+                <form action="send.php" method="post"> 
+                  <div class="col-xs-12"> 
+                    <input type="hidden" name="what" value="Звязатися з клієнтом">                   
+                    <input name="name" required placeholder="Ім'я..." type="text"
+                    class="form-control form-input">
+                  </div>
+                  <div class="col-xs-12">
+                    <input name="phone" id="phone-1" required placeholder="Тел..." type="text"
+                    class="form-control form-input">
+                  </div>
+                  <div class="col-xs-12">
+                    <input name="email" id="email-1" required placeholder="Email..." type="text"
+                    class="form-control form-input">
+                  </div>
+                  <div class="col-xs-12">
+                    <button class="btn btn-success" type="submit">Відправити дані</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
