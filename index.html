@@ -25,10 +25,10 @@
    <header>
       <div id="top" class="container-fluid">
          <div class="row top_line">
-            <div class="col-md-3 col-lg-3 top_line_logo">
+            <div class="col-md-3 col-lg-3 top_line_logo hidden-sm hidden-xs">
                <img src="img/logotype.png" alt="Logotype">
             </div>
-            <div class="col-sm-10 col-md-4 col-lg-3 hidden-sm">
+            <div class="col-sm-10 col-md-4 col-lg-3 hidden-sm hidden-xs">
                <ul class="header_contact">               
                   <li>
                      <i class="fa fa-envelope-o icon_email" aria-hidden="true"></i>
@@ -40,7 +40,7 @@
                   </li>
                </ul>
             </div>
-            <div class="hidden-md col-lg-2 top_line_phone hidden-sm">
+            <div class="hidden-md col-lg-2 top_line_phone hidden-sm hidden-xs">
                <ul class="header_telephone">               
                   <li>
                      <i class="fa fa-mobile icon_phone" aria-hidden="true"></i>
@@ -51,8 +51,8 @@
                   </li>
                </ul>
             </div>
-            <div class="col-md-4 col-lg-3 top_line_btn">               
-               <div class="sing_up_header hidden-sm">
+            <div class="col-md-4 col-lg-3 top_line_btn hidden-xs hidden-sm">               
+               <div class="sing_up_header">
                   <a class="btn_sing_up_header" href="#" data-toggle="modal">Sign up for consultation</a>
                </div> 
             </div>
@@ -63,7 +63,8 @@
                           id="dropdownMenu1" 
                           data-toggle="dropdown" 
                           aria-haspopup="true" 
-                          aria-expanded="true">
+                          aria-expanded="true"
+                          >
                    <i class="fa fa-globe icon_globe" aria-hidden="true"></i>English
                      <span class="caret"></span>
                   </button>
@@ -77,14 +78,15 @@
          <!--======================= блок всього меню і випадаючих списків =========================-->
          <div class="row line_top_menu">
             <div class="second_line container-fluid">
-               <div class="navbar-header second_line_dropdawn">
+               <div class="navbar-header navbar-default second_line_dropdawn">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  
+                  <a class="navbar-brand navbar_logo hidden-md hidden-lg hidden-xs" href="#"><img src="img/logotype.png" alt="Logotype"></a>
+                  <a class="navbar-brand navbar_logo hidden-md hidden-lg hidden-sm" href="#"><img src="img/logo_xs.png" alt="Logotype"></a>
                 </div>
 
                <div class="col-md-10 col-lg-11 second_line_nav collapse navbar-collapse" id="navbar-collapse">
@@ -180,7 +182,7 @@
                      </li>                                         
                   </ul>                  
                </div>
-               <div class="search hidden-sm hidden-xs col-md-2 col-lg-1">                  
+               <div class="search hidden-sm hidden-xs col-md-2 col-lg-1">
                   <form>
                      <input class="search-input" type="text" name="search" placeholder="Search..">
                   </form>
@@ -189,7 +191,7 @@
          </div> 
          <!--======================= кінець блоку всього меню і випадаючих списків =========================-->
          <!--====================== breadcrumb lg =======================-->
-         <div class="row header_brad visible-lg">
+         <div class="row header_brad hidden-sm hidden-md hidden-xs">
             <div class="row header_breadcrumb">
                <ol class="breadcrumb my_breadcrumb">
                   <li ><a href="#">Home</a></li>
@@ -221,7 +223,7 @@
       <div class="container-fluid">
          <div class="row main_row">
             <div class="col-md-3 col-lg-3 aside" id="aside_show"> 
-               <div class="aside_img hidden-md hidden-lg">
+               <div class="aside_imgs hidden-md hidden-lg">
                   <a href="#"><img src="img/circle.png" alt="circle"></a>
                </div>             
                <div class="aside_nav">
@@ -244,7 +246,7 @@
                      <li class="last"><a href="#">Surrogacy</a></li>
                   </ul>
                </div>
-               <div class="aside_form hidden-sm">
+               <div class="aside_form hidden-sm hidden-xs">
                   <div class="aside_form_control">
                      <form action="#"> 
                      <h3>Contact Us</h3>
@@ -262,15 +264,17 @@
                      <button type="submit" class="btn btn-default aside_form_btn">Send</button>
                   </form>
                   </div>                               
+               </div>
+               <div class="aside_img hidden-sm hidden-xs">
+                  <h3>banner</h3>
+                  <!-- <img src="img/banner.jpg" alt="baner"> -->
                </div> 
-               <div class="aside_img hidden-sm">
-                  <img src="img/banner.jpg" alt="baner">
-               </div>             
+
             </div>
 
            <!--  ========даний блок буде видно тільки на великих екранах======== -->
 
-            <div class="col-md-9 col-lg-9 visible-lg">
+            <div class="col-md-9 col-lg-9 hidden-xs hidden-sm hidden-md">
                <div class="row egg_catalogs">
                   <div class="col-md-5 col-lg-5">
                      <h3>Egg donor catalogs</h3>
@@ -281,7 +285,7 @@
                      <div class="show_database_btn"><a href="#">Show database</a></div>
                   </div>
                   <div class="col-md-7 col-lg-7">
-                     <div id="carousel-main-generic1" class="carousel slide" data-ride="carousel">
+                     <div id="carousel-main-generic1" class="carousel slide" data-ride="carousel my_carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                            <li data-target="#carousel-main-generic1" data-slide-to="0" class="active"></li>
@@ -334,7 +338,7 @@
                      </div>
                   </div>
                   <div class="col-md-7">
-                     <div id="carousel-main-generic2" class="carousel slide" data-ride="carousel">
+                     <div id="carousel-main-generic2" class="carousel slide" data-ride="carousel my_carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                            <li data-target="#carousel-main-generic2" data-slide-to="0" class="active"></li>
@@ -363,17 +367,18 @@
 
             <!--  ========даний блок буде видно на середніх і малих екранах======== -->
 
-            <div class="col-sm-12 col-md-9 hidden-lg main_right">
+            <div class="col-xs-12 col-sm-12 col-md-9 hidden-lg main_right">
                <div class="row egg_catalogs">
-                  <div class="col-md-5">
+                  <div class="col-xs-12 col-md-5 text_box">
                      <h3>Egg donor cata-logs</h3>
                      <p>IVF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal</p>
                      <p>pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.</p>
                      <p>IVF (in vitro fertlisation) involves retrieving</p>
+
                      <div class="show_database_btn"><a href="#">Show database</a></div>
                   </div>
-                  <div class="col-sm-12 col-md-7">
-                     <div id="carousel-main-generic4" class="carousel slide" data-ride="carousel">
+                  <div class="col-xs-12 col-sm-12 col-md-7">
+                     <div id="carousel-main-generic4" class="carousel slide" data-ride="carousel my_carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                            <li data-target="#carousel-main-generic4" data-slide-to="0" class="active"></li>
@@ -395,13 +400,13 @@
                         </div>
 
                          <!-- Controls -->
-                        <a class="left carousel-control my_carousel_control_left" href="#carousel-main-generic4" role="button" data-slide="prev">
+                        <a class="left carousel-control my_carousel_control_left hidden-xs" href="#carousel-main-generic4" role="button" data-slide="prev">
                            <span class="carousel_control to_left">
                               <i class="fa fa-angle-left" aria-hidden="true"></i>
                            </span>
                            <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control my_carousel_control_right" href="#carousel-main-generic4" role="button" data-slide="next">
+                        <a class="right carousel-control my_carousel_control_right hidden-xs" href="#carousel-main-generic4" role="button" data-slide="next">
                            <span class="carousel_control to_right">
                               <i class="fa fa-angle-right" aria-hidden="true"></i>
                            </span>
@@ -411,7 +416,7 @@
                   </div>
                </div>
                <div class="row egg_catalogs">
-                  <div class="col-sm-12 col-md-5">
+                  <div class="col-xs-12 col-sm-12 col-md-5 text_box">
                      <h3>Sperm donor catalogs</h3>
                      <p>IVF (in vitro fertlisation) involves retrieving eggs from a woman’s ovaries and fertilising these in the laboratory with sperm from either her partner or a donor to create embryos which are replaced back into her womb to develop as a normal</p>
                      <p>pregnancy. The journey through an IVF treatment can seem quite a daunting process, so we are here to help support you through every step, ensuring that you feel happy that the treatment is the right way forward for you.</p>
@@ -420,8 +425,8 @@
                         <a href="#">Show database</a>
                      </div>
                   </div>
-                  <div class="col-sm-12 col-md-7">
-                     <div id="carousel-main-generic3" class="carousel slide" data-ride="carousel">
+                  <div class="col-xs-12 col-sm-12 col-md-7">
+                     <div id="carousel-main-generic3" class="carousel slide" data-ride="carousel ">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                            <li data-target="#carousel-main-generic3" data-slide-to="0" class="active"></li>
@@ -443,13 +448,13 @@
                         </div>
 
                          <!-- Controls -->
-                        <a class="left carousel-control my_carousel_control_left" href="#carousel-main-generic3" role="button" data-slide="prev">
+                        <a class="left carousel-control my_carousel_control_left hidden-xs" href="#carousel-main-generic3" role="button" data-slide="prev">
                            <span class="carousel_control to_left">
                               <i class="fa fa-angle-left" aria-hidden="true"></i>
                            </span>
                            <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control my_carousel_control_right" href="#carousel-main-generic3" role="button" data-slide="next">
+                        <a class="right carousel-control my_carousel_control_right hidden-xs" href="#carousel-main-generic3" role="button" data-slide="next">
                            <span class="carousel_control to_right">
                               <i class="fa fa-angle-right" aria-hidden="true"></i>
                            </span>
@@ -470,7 +475,7 @@
   
 
    <section id="contact_form" class="hidden-md hidden-lg">
-      <div class="container-fluid">
+      <div class="container-fluid ">
          <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                <div class="aside_form">
@@ -494,10 +499,11 @@
                </div> 
             </div>
          </div>
-         <div class="row">
+         <div class="row contact_form_img">
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="aside_img">
-                  <img src="img/banner.jpg" alt="baner">
+                <h3>banner</h3>
+                  <!-- <img src="img/banner.jpg" alt="baner"> -->
                </div>
             </div>
          </div>
@@ -505,18 +511,18 @@
    </section>
 
    <section id="program">
-      <div class="container-fluid">
+      <div class="container-fluid delit_pading">
          <div class="row program_class">
             <h3><span>Infertility treatment</span> Programs</h3>
-            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF + ICSI</h4>
                <a href="#">Read more</a>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF+ ICSI with storage</h4>
                <a href="#">Read more</a>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 program_container">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 program_container">
                <h4>IVF with fresh donor oocytes</h4>
                <a href="#">Read more</a>
             </div>
@@ -528,8 +534,9 @@
       <div id="button_up" class=" visible-lg">    <!-- кнопка up -->
          <a href="#top"></a>
       </div>
-      <div class="container-fluid">
-         <div class="footer_top">
+      <div class="container-fluid all_footer">
+      <!-- на маленьких екранах дані списки не видно їх замінить список нижче -->
+         <div class="footer_top hidden-sm hidden-xs">
             <div class="row footer_info">                  
                <div class="col-md-2 col-lg-2">
                      <ul>
@@ -581,28 +588,143 @@
                   </ul>
                </div>
             </div> 
-         </div>           
-        
+         </div>
+         <!--======================= Кінець  ===========================-->
+
+         <!-- на великих екранах дані списки не видно їх замінить список зверху -->
+         <div class="dropdown_footer_ul hidden-md hidden-lg">
+            <div class="row footer_info">               
+                  <ul class="footer_nav nav navbar-nav">
+                     <li class="dropdown">
+                        <a class="dropdown-toggle main"
+                            id="clinic_menu_footer"
+                            href="#"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">
+                            Clinic<span class="caret"></span>
+                        </a>
+                        <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
+                              <ul class="dropdown-menu" aria-labelledby="clinic_menu_footer">                        
+                                 <li class="dropdown_menu_li"><a href="#">About us</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Why us</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Our Certificates</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Our Team</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Success Rates</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Location</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">3-D Clinic Tour</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Photo Gallery</a></li>
+                              </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle main"
+                            id="infertility_menu_footer"
+                            href="#"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">About infertility<span class="caret"></span></a>
+                        <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
+                              <ul class="dropdown-menu" aria-labelledby="infertility_menu_footer">
+                                 <li class="dropdown_menu_li"><a href="#">Causes of infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Female infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Male infertility</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Female infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Male infertility Diagnostics</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Genetic Diagnostics</a></li>
+                              </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle main"
+                            id="patient_menu_footer"
+                            href="#"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">International Patient Care<span class="caret"></span></a>
+                            <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
+                              <ul class="dropdown-menu" aria-labelledby="patient_menu_footer">
+                                 <li class="dropdown_menu_li"><a href="#">First visit</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Care and assistance</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">International patients accommodation</a></li>
+                              </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle main"
+                            id="treatments_menu_footer"
+                            href="#"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">Treatments<span class="caret"></span></a>
+
+                            <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->                  
+                              <ul class="dropdown-menu" aria-labelledby="treatments_menu_footer">
+                                 <li class="dropdown_menu_li"><a href="#">Fertility treatment methods</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Infertility treatment Programs</a></li>
+                              </ul>
+                     </li>
+                     <li><a href="#">Fertility treatment methods</a></li>
+                     <li><a href="#">Infertility treatment Programs</a></li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle main"
+                            id="infertility_menu_footer"
+                            href="#"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">About infertility<span class="caret"></span></a>
+                        <!-- всі випадаючі підменю. при необхідності можна видалити, або замінити -->
+                              <ul class="dropdown-menu" aria-labelledby="infertility_menu_footer">
+                                 <li class="dropdown_menu_li"><a href="#">Prices</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Patient Success stories</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Blogs</a></li>
+                                 <li class="dropdown_menu_li"><a href="#">Contact</a></li>
+                              </ul>
+                     </li>                     
+                     </ul>
+                     </li>                                         
+                  </ul>
+            </div>
+         </div>
+            
+         <!--======================= Кінець  ===========================-->
+
+         <!-- додаткові соціальні мережі що будуть видні тільки на малих екранах -->
+
+         <div class="row footer_contact hidden-md hidden-lg">
+            <div class="col-xs-12  col-sm-12">
+               <div class="social">
+                  <div class="footer_social text-center">
+                     <a href="#" class="facebook text-center"></a>
+                     <a href="#" class="twitter text-center"></a>
+                     <a href="#" class="youtube text-center"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--======================= Кінець  ===========================-->
          <div class="row footer_contact">
-            <div class="col-md-4 col-lg-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                <div class="footer_year">
                   <p>© 2008-2015</p>
                </div>
             </div>
-            <div class="col-md-4 col-lg-4">
+            <div class="col-md-4 col-lg-4 hidden-sm hidden-xs">
                <div class="social">
                   <div class="footer_social">
                      <a href="#" class="facebook text-center"></a>
                      <a href="#" class="twitter text-center"></a>
                      <a href="#" class="youtube text-center"></a>
-                     <a href="#" class="google text-center hidden-md"></a>
+                     <a href="#" class="google text-center hidden-md "></a>
                   </div>
                </div>
             </div>
-            <div class="col-md-4 col-lg-4 our_logo">
-               <div class="otakoyi">
+            <div class="col-sm-12 col-md-4 col-lg-4 our_logo">
+               <div class="otakoyi text-center">
                   <span>Design and Development by <strong>OTAKOYI</strong><img src="img/otakoyi.png" alt="OTAKOYI"></span>
-
                </div>
             </div>
          </div>  
@@ -610,19 +732,13 @@
    </footer>
 
    <!-- Додаткові кнопки -->
-      <section id="button_contact_us" class="visible-lg">
+      <section id="button_contact_us" class="hidden-xs hidden-sm hidden-md">
          <a class="contact_us">
             <span>contact us</span>
             <i class="information_icon">             
-         </a>
+         </a>         
       </section>
 
-      
-
-      
-         
-
-    
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
